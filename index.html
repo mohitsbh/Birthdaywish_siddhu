@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Siddhu 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(270deg, #ff758c, #ff7eb3, #fad0c4, #a18cd1);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255,255,255,0.95);
+    padding: 35px;
+    width: 380px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 64, 129, 0.6);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 25px rgba(255, 64, 129, 0.4); }
+    to { box-shadow: 0 0 45px rgba(255, 64, 129, 0.9); }
+}
+
+h1 { color: #ff2d75; }
+
+.subtitle { color: #666; margin-bottom: 10px; }
+
+button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff2d75, #ff8fa3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255,45,117,0.6);
+}
+
+button:hover { transform: scale(1.05); }
+
+#wish {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 2s ease;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: sparkleMove 6s linear infinite;
+}
+
+@keyframes sparkleMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(-800px); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎂 वाढदिवसाच्या हार्दिक शुभेच्छा सिद्धू 🎂</h1>
+    <p class="subtitle">आजचा दिवस खास आहे — तुझ्यासाठी 💖</p>
+
+    <button onclick="showWish()">Happy Birthday<br>Click 🎁</button>
+
+    <div id="wish">
+        <h3>🌸 प्रिय सिद्धू 🌸</h3>
+        <p>
+            तुझ्या आयुष्यातील प्रत्येक दिवस आनंद, यश, आरोग्य आणि समाधानाने भरलेला असो.  
+            तुझे सर्व स्वप्न पूर्ण होवोत आणि तुझा प्रत्येक प्रयत्न यशस्वी ठरो.  
+            तुझ्या चेहऱ्यावरचे हास्य कधीच कमी होऊ नये, आणि आयुष्यभर तुझ्या सोबत सुख-शांती नांदो.
+        </p>
+        <p>
+            तू जसा आहेस तसाच कायम रहा — हसरा, सकारात्मक आणि आत्मविश्वासाने भरलेला.  
+            तुझ्या पुढील प्रवासासाठी मनःपूर्वक शुभेच्छा.
+        </p>
+        <p>🎉 पुन्हा एकदा वाढदिवसाच्या मनःपूर्वक शुभेच्छा सिद्धू! 🎉</p>
+        <p><b>— तुझा मित्र, मोहित ❤️</b></p>
+    </div>
+</div>
+
+<script>
+function showWish() {
+    document.getElementById("wish").style.display = "block";
+}
+
+// Sparkles
+for(let i=0;i<40;i++){
+    let s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.left = Math.random()*100 + "vw";
+    s.style.top = Math.random()*100 + "vh";
+    s.style.animationDuration = 3 + Math.random()*5 + "s";
+    document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
